@@ -10,7 +10,7 @@ const questions = [
         message: "Enter Title:",
         name: "title",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -18,7 +18,7 @@ const questions = [
         message: "Enter Description:",
         name: "description",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -26,7 +26,7 @@ const questions = [
         message: "Enter Installation Instructions:",
         name: "installation",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -34,7 +34,7 @@ const questions = [
         message: "Enter Usage Information:",
         name: "usage",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -42,7 +42,7 @@ const questions = [
         message: "Enter Contribution Information:",
         name: "contribute",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -50,7 +50,7 @@ const questions = [
         message: "Enter Tests Information:",
         name: "tests",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -66,7 +66,6 @@ const questions = [
             "cc-by-4.0",
             "wtfpl",
             "epl-1.0",
-            "eupl-1.1",
             "agpl-3.0",
             "gpl-2.0",
             "gpl-3.0",
@@ -78,7 +77,7 @@ const questions = [
             "zlib",
         ],
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -86,7 +85,7 @@ const questions = [
         message: "Enter Github Username:",
         name: "github",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
     {
@@ -94,7 +93,7 @@ const questions = [
         message: "Enter Email:",
         name: "email",
         validate: (input) => {
-            return input ? true : (console.log(message), false)
+            return input ? true : (console.log(this.message), false)
         }
     },
 
