@@ -29,7 +29,24 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license){
-    return renderLicenseBadge(license);//because the links are already in the svg badges above, I have ommitted this section as it essentially does nothing new.
+    if(license === "apache-2.0"){ return `(https://opensource.org/licenses/Apache-2.0)`}
+    if(license === "bsl-1.0"){ return `(https://www.boost.org/LICENSE_1_0.txt)`}
+    if(license === "bsd-2-clause"){ return `(https://opensource.org/licenses/BSD-2-Clause)`}
+    if(license === "bsd-3-clause"){ return `(https://opensource.org/licenses/BSD-3-Clause)`}
+    if(license === "cc0-1.0"){ return `(http://creativecommons.org/publicdomain/zero/1.0/)`}
+    if(license === "cc-by-4.0"){ return `(https://creativecommons.org/licenses/by/4.0/)`}
+    if(license === "wtfpl"){ return `(http://www.wtfpl.net/about/)`}
+    if(license === "epl-1.0"){ return `(https://opensource.org/licenses/EPL-1.0)`}
+    if(license === "agpl-3.0"){ return `(https://www.gnu.org/licenses/agpl-3.0)`}
+    if(license === "gpl-2.0"){ return `(https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`}
+    if(license === "gpl-3.0"){ return `(https://www.gnu.org/licenses/gpl-3.0)`}
+    if(license === "lgpl-3.0"){ return `(https://www.gnu.org/licenses/lgpl-3.0)`}
+    if(license === "isc"){ return `(https://opensource.org/licenses/ISC)`}
+    if(license === "mit"){ return `(https://opensource.org/licenses/MIT)`}
+    if(license === "mpl-2.0"){ return `(https://opensource.org/licenses/MPL-2.0)`}
+    if(license === "unlicense"){ return `(http://unlicense.org/)`}
+    if(license === "zlib"){ return `(https://opensource.org/licenses/Zlib)`}
+  
   }
   else{
     return "";
@@ -42,8 +59,9 @@ function renderLicenseSection(license) {
   if(license){
     return `
     ${renderLicenseLink(license)}
+
     This application is covered under the ${license} license. 
-    Click on the badge above for more information.
+    Click on the link above for more information.
     `
   }
   else{
@@ -82,7 +100,6 @@ function generateMarkdown(data) {
   ## License
 
   ${renderLicenseSection(data.license)}
-  ---
 
 
   ## Features
