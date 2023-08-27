@@ -29,7 +29,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license){
-
+    //because the links are already in the svg badges above, I have ommitted this section as it essentially does nothing new.
   }
   else{
     return "";
