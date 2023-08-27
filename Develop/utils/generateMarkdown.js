@@ -29,7 +29,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license){
-    //because the links are already in the svg badges above, I have ommitted this section as it essentially does nothing new.
+    return renderLicenseBadge(license);//because the links are already in the svg badges above, I have ommitted this section as it essentially does nothing new.
   }
   else{
     return "";
@@ -42,6 +42,8 @@ function renderLicenseSection(license) {
   if(license){
     return `
     ${renderLicenseLink(license)}
+    This application is covered under the ${license} license. 
+    Click on the badge above for more information.
     `
   }
   else{
@@ -98,7 +100,8 @@ function generateMarkdown(data) {
   ## Questions?
 
   github.com/${data.github}
-  email :${data.email}
+
+  email: ${data.email}
   `;
 }
 

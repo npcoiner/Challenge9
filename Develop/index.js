@@ -31,6 +31,22 @@ const questions = [
     },
     {
         type: 'input',
+        message: "Enter Credits:",
+        name: "credits",
+        validate: (input) => {
+            return input ? true : (console.log(this.message), false)
+        }
+    },
+    {
+        type: 'input',
+        message: "Enter Features:",
+        name: "features",
+        validate: (input) => {
+            return input ? true : (console.log(this.message), false)
+        }
+    },
+    {
+        type: 'input',
         message: "Enter Usage Information:",
         name: "usage",
         validate: (input) => {
